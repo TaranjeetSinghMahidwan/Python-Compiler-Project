@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Python Compiler</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Authentication Section -->
+  <div id="authSection">
+    <h1 style="text-align: center; font-family: 'Calibri', sans-serif; font-size: 2.5em; color: black;">Python Compiler</h1>
+    <div class="form-container">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" id="signupUsername" placeholder="Username" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Compiler Section (hidden by default) -->
+  <div id="compilerSection" style="display:none;">
+    <h1 style="text-align: center;">Python Compiler</h1>
+    <textarea id="codeInput"></textarea>
+    <div class="buttons">
+      <button onclick="runCode()">Run Code</button>
+      <button onclick="downloadCode()">Download Code</button>
+    </div>
+    <pre id="consoleOutput"></pre>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/mode/python/python.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
